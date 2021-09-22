@@ -1,0 +1,33 @@
+21-September-2021
+
+
+
+CoDeS3D command details :
+
+1. Activate the dev conda environment:
+
+conda activate /mnt/projects/users/tfad334/codes3d/codes3d-v2/envs/codes3d_env/
+--> This is developer version.. since the --multi-test tissue command is still new/have not been added to the public version
+
+ 
+
+2. Run your job:
+
+python /mnt/projects/users/tfad334/codes3d/codes3d-v2/codes3d/codes3d.py -s <path/toSNPs> -o <path/to/output> --multi-test tissue 
+ 
+3. Deactivate environment:
+conda deactivate
+
+*Note : to activate initialise conda, you need to do this first --> conda init
+
+
+- The input file is the 147 SNPs associated with JIA taken from GWAS catalog in txt file
+ located here : home/npud380/research_dir/JIA_SNPs/JIA_SNP_rsIDs.txt
+
+- Output directory is : home/npud380/research_dir/JIA_CoDeS3D_run_2
+
+
+the --multi-test tissue command is to make the multiple test correction to per-tissue basis instead of all tissues.
+Therefore we get P-value as if we run CoDeS3D for each tissue separately instead of together.
+This reduce the multiple testing burden..
+ 
